@@ -14,7 +14,7 @@ export default class Header extends React.Component {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="navbar-nav mr-auto">
                         <NavLink to="/" exact className="nav-item nav-link" activeClassName="active">Index</NavLink>
-                        <NavLink to="/about" className="nav-item nav-link" activeClassName="active">About</NavLink>
+                        <NavLink to="/map" className="nav-item nav-link" activeClassName="active">Map</NavLink>
                     </div>
                 </div>
             </nav>

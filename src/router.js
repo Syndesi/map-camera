@@ -12,29 +12,23 @@ const Index = Loadable({
   loading: Loading,
 });
 
-const Post = Loadable({
-  loader: () => import('./pages/Post.js'),
-  loading: Loading,
-});
-
-const About = Loadable({
-  loader: () => import('./pages/About.js'),
+const Map = Loadable({
+  loader: () => import('./pages/Map.js'),
   loading: Loading,
 });
 
 
 export default class Router extends React.Component {
-    render() {
-        return (
-            <div className="app">
-                <Route component={Header}/>
-                <Switch>
-                    <Route exact path='/' component={Index}/>
-                    <Route path='/:story/:id' component={Post}/>
-                    <Route path='/about' component={About}/>
-                </Switch>
-                <Route component={Footer}/>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="app">
+        <Route component={Header}/>
+        <Switch>
+          <Route exact path='/' component={Index}/>
+          <Route path='/map' component={Map}/>
+        </Switch>
+        <Route component={Footer}/>
+      </div>
+    );
+  }
 }
